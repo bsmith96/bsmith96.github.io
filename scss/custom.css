@@ -10724,57 +10724,135 @@ textarea.form-control-lg {
 }
 body {
   background-color: #f8f9fa;
+  font-family: karla;
 }
 
+@font-face {
+  font-family: rockSalt;
+  src: url("../fonts/RockSalt-Regular.ttf");
+}
+@font-face {
+  font-family: nothingYouCouldDo;
+  src: url("../fonts/NothingYouCouldDo-Regular.ttf");
+}
+@font-face {
+  font-family: caveat;
+  src: url("../fonts/Caveat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: annie;
+  src: url("../fonts/AnnieUseYourTelescope-Regular.ttf");
+}
+@font-face {
+  font-family: specialElite;
+  src: url("../fonts/SpecialElite-Regular.ttf");
+}
+@font-face {
+  font-family: syneMono;
+  src: url("../fonts/Syne_Mono/SyneMono-Regular.ttf");
+}
+@font-face {
+  font-family: raleway;
+  src: url("../fonts/Raleway/Raleway-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: nunito;
+  src: url("../fonts/Nunito/Nunito-Regular.ttf");
+}
+@font-face {
+  font-family: firaSans;
+  src: url("../fonts/Fira_Sans/FiraSans-Regular.ttf");
+}
+@font-face {
+  font-family: lexend;
+  src: url("../fonts/Lexend/Lexend-Regular.ttf");
+}
+@font-face {
+  font-family: karla;
+  src: url("../fonts/Karla/Karla-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: openSansCondensed;
+  src: url("../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf");
+}
 .header {
-  background-color: #052c65;
-  color: #cfe2ff;
+  background-color: #00296B;
+  color: #C2D9FF;
   background-image: var(--bs-gradient);
+  text-shadow: 5px 3px 5px #001329;
 }
 
 .header-title {
-  text-decoration: underline;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
+  font-family: rockSalt;
 }
 
 .header-subtitle {
   text-align: center;
-  font-size: 1.5rem;
+  font-family: raleway;
+  font-size: 1.25rem;
+}
+
+.navbar-brand {
+  font-family: rockSalt;
+  text-shadow: 5px 3px 4px #001329;
+}
+
+.navbar {
+  font-family: raleway;
+}
+
+.carousel-title {
+  font-family: rockSalt;
+  text-shadow: 2px 5px 5px #001329;
+}
+
+.carousel-desc {
+  font-family: raleway;
+  text-shadow: 4px 2px 3px #001329;
 }
 
 .page-heading {
-  color: #031633;
+  color: #00296B;
   text-align: center;
   text-decoration: underline;
+  font-family: specialElite;
 }
 
 .page-subheading {
-  color: #052c65;
+  color: #00296B;
   text-align: center;
+  font-family: syneMono;
 }
 
 .show-info {
-  background-color: #9ec5fe;
+  background-color: #C2D9FF;
   background-image: var(--bs-gradient);
   color: #031633;
 }
 
 .show-info-name {
+  font-family: specialElite;
   font-size: xx-large;
   font-weight: bold;
+  color: #00296B;
 }
 
 .show-info-role {
   font-size: larger;
+  font-family: raleway;
+  color: #00296B;
 }
 
 .show-info-creatives {
   font-style: italic;
+  font-family: raleway;
 }
 
 .show-info-readmore {
+  font-family: nothingYouCouldDo;
   font-size: smaller;
 }
 
@@ -10805,6 +10883,14 @@ body {
 .page-info-date {
   text-align: right;
   vertical-align: text-top;
+}
+
+.blockquote {
+  font-family: nothingYouCouldDo;
+}
+
+.blockquote-footer {
+  font-family: rockSalt;
 }
 
 /*# sourceMappingURL=custom.css.map */

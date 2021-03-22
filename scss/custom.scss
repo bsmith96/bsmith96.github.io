@@ -1,63 +1,174 @@
 @import "../bootstrap/scss/bootstrap";
 
+// Theme Colors
+$primary: #00296B;
+$secondary: #C2D9FF;
+//$light: #FFD166;
+$dark: #001329;
+
 // All pages background color
 body {
   background-color: $light;
+  font-family: karla;
+}
+
+// Add font face
+@font-face {
+  font-family: rockSalt;
+  src: url("../fonts/RockSalt-Regular.ttf");
+}
+
+@font-face {
+  font-family: nothingYouCouldDo;
+  src: url("../fonts/NothingYouCouldDo-Regular.ttf");
+}
+
+@font-face {
+  font-family: caveat;
+  src: url("../fonts/Caveat-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: annie;
+  src: url("../fonts/AnnieUseYourTelescope-Regular.ttf");
+}
+
+@font-face {
+  font-family: specialElite;
+  src: url("../fonts/SpecialElite-Regular.ttf");
+}
+
+@font-face {
+  font-family: syneMono;
+  src: url("../fonts/Syne_Mono/SyneMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: raleway;
+  src: url("../fonts/Raleway/Raleway-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: nunito;
+  src: url("../fonts/Nunito/Nunito-Regular.ttf");
+}
+
+@font-face {
+  font-family: firaSans;
+  src: url("../fonts/Fira_Sans/FiraSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: lexend;
+  src: url("../fonts/Lexend/Lexend-Regular.ttf");
+}
+
+@font-face {
+  font-family: karla;
+  src: url("../fonts/Karla/Karla-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: openSansCondensed;
+  src: url("../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf");
 }
 
 // Header formatting
 .header {
-  background-color: $blue-800;
-  color: $blue-100;
+  //background-color: $blue-800;
+  background-color: $primary;
+  //color: $blue-100;
+  color: $secondary;
   background-image: var(--bs-gradient);
+  text-shadow: 5px 3px 5px $dark;
 }
 
 .header-title {
-  text-decoration: underline;
-  font-size: $h1-font-size;
+  //text-decoration: underline;
+  font-size: $h2-font-size;
   font-weight: bold;
   text-align: center;
+  font-family: rockSalt;
 }
 
 .header-subtitle {
   text-align: center;
-  font-size: $h4-font-size;
+  //font-size: $h4-font-size;
+  font-family: raleway;
+  font-size: $h5-font-size;
+}
+
+// Navbar
+
+.navbar-brand {
+  font-family: rockSalt;
+  text-shadow: 5px 3px 4px $dark;
+}
+
+.navbar {
+  font-family: raleway;
+}
+
+// Carousel
+
+.carousel-title {
+  font-family: rockSalt;
+  text-shadow: 2px 5px 5px $dark;
+}
+
+.carousel-desc {
+  font-family: raleway;
+  text-shadow: 4px 2px 3px $dark;
 }
 
 // Heading formatting
 .page-heading {
-  color: $blue-900;
+  //color: $blue-900;
+  color: $primary;
   text-align: center;
   text-decoration: underline;
+  font-family: specialElite;
 }
 
 .page-subheading {
-  color: $blue-800;
+  //color: $blue-800;
+  color: $primary;
   text-align: center;
+  font-family: syneMono;
 }
 
 // Show info formatting - on home page list
 .show-info {
   //align-items: center;
-  background-color: $blue-200;
+  //background-color: $blue-200;
+  background-color: $secondary;
   background-image: var(--bs-gradient);
   color: $blue-900
 }
 
 .show-info-name {
+  //font-family: specialElite;
+  font-family: specialElite;
   font-size: xx-large;
+  //font-size: large;
   font-weight: bold;
+  color: $primary;
 }
 
 .show-info-role {
   font-size: larger;
+  font-family: raleway;
+  color: $primary;
 }
 
 .show-info-creatives {
   font-style: italic;
+  font-family: raleway;
+  //font-family: nothingYouCouldDo;
 }
 
 .show-info-readmore {
+  font-family: nothingYouCouldDo;
   font-size: smaller;
 }
 
@@ -93,6 +204,15 @@ body {
 .page-info-date {
   text-align: right;
   vertical-align: text-top;
+}
+
+// Blockquote attribution
+.blockquote {
+  font-family: nothingYouCouldDo;
+}
+
+.blockquote-footer {
+  font-family: rockSalt;
 }
 
 // Variables
