@@ -10736,11 +10736,11 @@ body {
   text-decoration: underline;
   font-size: 2.5rem;
   font-weight: bold;
-  text-align: right;
+  text-align: center;
 }
 
 .header-subtitle {
-  text-align: left;
+  text-align: center;
   font-size: 1.5rem;
 }
 
@@ -10756,7 +10756,6 @@ body {
 }
 
 .show-info {
-  align-items: center;
   background-color: #9ec5fe;
   background-image: var(--bs-gradient);
   color: #031633;
@@ -10775,7 +10774,35 @@ body {
   font-style: italic;
 }
 
+.show-info-readmore {
+  font-size: smaller;
+}
+
 .show-info-date {
+  text-align: right;
+  vertical-align: text-top;
+}
+
+.page-info {
+  background-color: #9ec5fe;
+  background-image: var(--bs-gradient);
+  color: #031633;
+}
+
+.page-info-producer {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.page-info-venue {
+  font-size: larger;
+}
+
+.page-info-creatives {
+  font-style: italic;
+}
+
+.page-info-date {
   text-align: right;
   vertical-align: text-top;
 }

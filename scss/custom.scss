@@ -16,11 +16,11 @@ body {
   text-decoration: underline;
   font-size: $h1-font-size;
   font-weight: bold;
-  text-align: right;
+  text-align: center;
 }
 
 .header-subtitle {
-  text-align: left;
+  text-align: center;
   font-size: $h4-font-size;
 }
 
@@ -36,9 +36,9 @@ body {
   text-align: center;
 }
 
-// Show info formatting
+// Show info formatting - on home page list
 .show-info {
-  align-items: center;
+  //align-items: center;
   background-color: $blue-200;
   background-image: var(--bs-gradient);
   color: $blue-900
@@ -57,11 +57,40 @@ body {
   font-style: italic;
 }
 
+.show-info-readmore {
+  font-size: smaller;
+}
+
 //.show-info-desc {
 //
 //}
 
 .show-info-date {
+  text-align: right;
+  vertical-align: text-top;
+}
+
+// Show info formatting - on show specific pages
+.page-info {
+  background-color: $blue-200;
+  background-image: var(--bs-gradient);
+  color: $blue-900
+}
+
+.page-info-producer {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.page-info-venue {
+  font-size: larger;
+}
+
+.page-info-creatives {
+  font-style: italic;
+}
+
+.page-info-date {
   text-align: right;
   vertical-align: text-top;
 }
