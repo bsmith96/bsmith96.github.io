@@ -1,0 +1,71 @@
+@import "../bootstrap/scss/bootstrap";
+
+// All pages background color
+body {
+  background-color: $light;
+}
+
+// Header formatting
+.header {
+  background-color: $blue-800;
+  color: $blue-100;
+  background-image: var(--bs-gradient);
+}
+
+.header-title {
+  text-decoration: underline;
+  font-size: $h1-font-size;
+  font-weight: bold;
+  text-align: right;
+}
+
+.header-subtitle {
+  text-align: left;
+  font-size: $h4-font-size;
+}
+
+// Heading formatting
+.page-heading {
+  color: $blue-900;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.page-subheading {
+  color: $blue-800;
+  text-align: center;
+}
+
+// Show info formatting
+.show-info {
+  align-items: center;
+  background-color: $blue-200;
+  background-image: var(--bs-gradient);
+  color: $blue-900
+}
+
+.show-info-name {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.show-info-role {
+  font-size: larger;
+}
+
+.show-info-creatives {
+  font-style: italic;
+}
+
+.show-info-desc {
+
+}
+
+.show-info-date {
+  text-align: right;
+  vertical-align: text-top;
+}
+
+// Variables
+$enable-shadows: true;
+$enable-gradients: true;
