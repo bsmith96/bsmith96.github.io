@@ -173,13 +173,18 @@ body {
 }
 
 //.show-info-desc {
-//
+//  text-align: justify;
+//  border-right: 1px solid $primary;
 //}
 
 .show-info-date {
   text-align: right;
   vertical-align: text-top;
 }
+
+//.show-info-sidebar {
+//  border-left: 1px solid $primary;
+//}
 
 // Show info formatting - on show specific pages
 .page-info {
@@ -213,6 +218,22 @@ body {
 
 .blockquote-footer {
   font-family: rockSalt;
+}
+
+.sticky {
+  background: $light;
+  display: block;
+  padding: 1em;
+  margin: 2em;
+  box-shadow: 5px 5px 7px $dark;
+}
+
+.sticky-a {
+  transform: rotate(-4deg);
+}
+
+.sticky-b {
+  transform: rotate(+2deg);
 }
 
 // Variables
