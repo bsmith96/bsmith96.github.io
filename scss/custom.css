@@ -10836,7 +10836,6 @@ body {
 .show-info-name {
   font-family: specialElite;
   font-size: xx-large;
-  font-weight: bold;
   color: #00296B;
 }
 
@@ -10887,10 +10886,12 @@ body {
 
 .blockquote {
   font-family: nothingYouCouldDo;
+  color: #00296B;
 }
 
 .blockquote-footer {
   font-family: rockSalt;
+  color: #00296B;
 }
 
 .sticky {

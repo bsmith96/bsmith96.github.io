@@ -151,7 +151,7 @@ body {
   font-family: specialElite;
   font-size: xx-large;
   //font-size: large;
-  font-weight: bold;
+  //font-weight: bold;
   color: $primary;
 }
 
@@ -214,10 +214,12 @@ body {
 // Blockquote attribution
 .blockquote {
   font-family: nothingYouCouldDo;
+  color: $primary;
 }
 
 .blockquote-footer {
   font-family: rockSalt;
+  color: $primary;
 }
 
 // Sticky note appearance
