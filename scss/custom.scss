@@ -143,7 +143,8 @@ body {
   //background-color: $blue-200;
   background-color: $secondary;
   background-image: var(--bs-gradient);
-  color: $blue-900
+  color: $blue-900;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) inset;
 }
 
 .show-info-name {
@@ -228,15 +229,25 @@ body {
   display: block;
   padding: 1em;
   margin: 2em;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .sticky-a {
+  position: relative;
   transform: rotate(-4deg);
+  box-shadow: -0.035rem 0.499rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .sticky-b {
+  position: relative;
   transform: rotate(+2deg);
+  box-shadow: 0.017rem 0.500rem 1rem rgba(0,0,0,0.15);
+}
+
+// Embedded videos
+
+.embedded-video {
+  box-shadow: 0rem 0.5rem 1rem rgba(0,0,0,0.15);
+  border-radius: 0.25rem;
 }
 
 // Variables

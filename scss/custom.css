@@ -10831,6 +10831,7 @@ body {
   background-color: #C2D9FF;
   background-image: var(--bs-gradient);
   color: #031633;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) inset;
 }
 
 .show-info-name {
@@ -10899,15 +10900,23 @@ body {
   display: block;
   padding: 1em;
   margin: 2em;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .sticky-a {
+  position: relative;
   transform: rotate(-4deg);
+  box-shadow: -0.035rem 0.499rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .sticky-b {
+  position: relative;
   transform: rotate(2deg);
+  box-shadow: 0.017rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.embedded-video {
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
 }
 
 /*# sourceMappingURL=custom.css.map */
