@@ -10919,4 +10919,10 @@ body {
   border-radius: 0.25rem;
 }
 
+.footer {
+  background-color: #ced4da;
+  font-style: italic;
+  text-align: right;
+}
+
 /*# sourceMappingURL=custom.css.map */
