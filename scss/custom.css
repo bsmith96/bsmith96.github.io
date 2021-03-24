@@ -10915,7 +10915,7 @@ body {
 }
 
 .embedded-video {
-  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
   border-radius: 0.25rem;
 }
 
@@ -10923,6 +10923,11 @@ body {
   background-color: #ced4da;
   font-style: italic;
   text-align: right;
+  background-image: var(--bs-gradient);
+}
+
+.footer-image {
+  -webkit-filter: drop-shadow(0rem 0.5rem 1rem rgba(0, 0, 0, 0.7));
 }
 
 /*# sourceMappingURL=custom.css.map */
