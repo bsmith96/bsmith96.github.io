@@ -42,10 +42,17 @@ function angledShadow(element) {
   }
 }
 
-// get elements to give shadow
-var rotatedElements = document.getElementsByClassName("sticky");
+function enableShadows() {
+  // get elements to give shadow
+  var rotatedElements = document.getElementsByClassName("sticky");
 
-// loop through elements
-for (i in rotatedElements) {
-  angledShadow(rotatedElements[i]);
+  console.log(rotatedElements);
+
+  // loop through elements
+  for (const element of rotatedElements) {
+    console.log(element.parentNode.parentNode.parentNode.id);
+    angledShadow(element);
+  }
 }
+
+window.onload = enableShadows();
