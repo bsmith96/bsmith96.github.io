@@ -10729,23 +10729,15 @@ body {
 
 @font-face {
   font-family: rockSalt;
-  src: url("../fonts/RockSalt-Regular.ttf");
+  src: url("../fonts/Rock_Salt/RockSalt-Regular.ttf");
 }
 @font-face {
   font-family: nothingYouCouldDo;
-  src: url("../fonts/NothingYouCouldDo-Regular.ttf");
-}
-@font-face {
-  font-family: caveat;
-  src: url("../fonts/Caveat-VariableFont_wght.ttf");
-}
-@font-face {
-  font-family: annie;
-  src: url("../fonts/AnnieUseYourTelescope-Regular.ttf");
+  src: url("../fonts/Nothing_You_Could_Do/NothingYouCouldDo-Regular.ttf");
 }
 @font-face {
   font-family: specialElite;
-  src: url("../fonts/SpecialElite-Regular.ttf");
+  src: url("../fonts/Special_Elite/SpecialElite-Regular.ttf");
 }
 @font-face {
   font-family: syneMono;
@@ -10756,24 +10748,8 @@ body {
   src: url("../fonts/Raleway/Raleway-VariableFont_wght.ttf");
 }
 @font-face {
-  font-family: nunito;
-  src: url("../fonts/Nunito/Nunito-Regular.ttf");
-}
-@font-face {
-  font-family: firaSans;
-  src: url("../fonts/Fira_Sans/FiraSans-Regular.ttf");
-}
-@font-face {
-  font-family: lexend;
-  src: url("../fonts/Lexend/Lexend-Regular.ttf");
-}
-@font-face {
   font-family: karla;
   src: url("../fonts/Karla/Karla-VariableFont_wght.ttf");
-}
-@font-face {
-  font-family: openSansCondensed;
-  src: url("../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf");
 }
 .header {
   background-color: #00296B;
