@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="../scss/custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid header sticky-top">
+    <div class="row pt-3 pb-2 justify-content-center align-items-center">
+      <div class="col-lg-3">
+        <p class="header-title">Ben Smith Sound</p>
+      </div>
+      <div class="col-lg-3">
+        <p class="header-subtitle">Generate new production entry</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-4">
+    <form id="prodForm">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="form-floating mb-3">
+            <input type="string" class="form-control" id="prodName" placeholder="Name">
+            <label for="prodName">Production Name</label>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="form-floating mb-3">
+            <input class="form-control" id="prodMonth" placeholder="Month">
+            <label for="prodMonth">Production Month (2 digit number)</label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-floating mb-3">
+            <input class="form-control" id="prodYear" placeholder="Year">
+            <label for="prodYear">Production Year (4 digit number)</label>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="form-floating mb-3">
+            <input class="form-control" id="prodDateString" placeholder="Month Year">
+            <label for="prodDateString">Date label (e.g. "January 2021")</label>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="form-floating mb-3">
+            <input class="form-control" id="myRole" placeholder="Sound No. 1">
+            <label for="myRole">My Role in the production</label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-floating mb-3">
+            <input class="form-control" id="prodVenue" placeholder="UK Tour">
+            <label for="prodVenue">Production Venue</label>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="form-floating mb-3">
+            <input class="form-control" id="prodPoster" placeholder="Poster">
+            <label for="prodPoster">Production Poster name (including ".jpeg" extension)</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input class="form-control" id="prodProducer" placeholder="Production">
+            <label for="prodProducer">Production Producer</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input class="form-control" id="prodDirector" placeholder="Director">
+            <label for="prodDirector">Production Director</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input class="form-control" id="prodSoundDesigner" placeholder="Sound Designer">
+            <label for="prodSoundDesigner">Production Sound Designer</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Writing credits here" id="prodWritingCredits" style="height: 100px"></textarea>
+            <label for="prodWritingCredits">Writing credits</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Description here" id="prodDescription" style="height: 100px"></textarea>
+            <label for="prodDescription">Production Description</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="iFrame here" id="prodVideo" style="height: 100px"></textarea>
+            <label for="prodVideo">Video iFrame embed code here</label>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Quote" id="prodQuote1"></textarea>
+            <label for="prodQuote1">Quote 1</label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col">
+              <div class="form-floating mb-3">
+                <input class="form-control" placeholder="Source" id="prodSource1">
+                <label for="prodSource1">Source 1</label>
+              </div>
+            </div>
+            <div class="col">
+              <select class="form-select" id="sticky-rotation-1" aria-label="select sticky note rotation">
+                <option value="ACW" selected>Tilt Anticlockwise</option>
+                <option value="CW">Tilt Clockwise</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Quote" id="prodQuote2"></textarea>
+            <label for="prodQuote2">Quote 2</label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col">
+              <div class="form-floating mb-3">
+                <input class="form-control" placeholder="Source" id="prodSource2">
+                <label for="prodSource2">Source 2</label>
+              </div>
+            </div>
+            <div class="col">
+              <select class="form-select" id="sticky-rotation-2" aria-label="select sticky note rotation">
+                <option value="ACW" selected>Tilt Anticlockwise</option>
+                <option value="CW">Tilt Clockwise</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-8 mb-3">
+          <button class="btn btn-primary" type="submit" value="check">Generate HTML</button>
+          <button class="btn btn-primary" type="button" value="copy" id="copyhtml">Copy HTML</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="form-floating mb-3">
+    <textarea class="form-control mb-3" placeholder="HTML" id="output" style="height: 200px"></textarea>
+    <label for="output">HTML Output</label>
+  </div>
+  <div id="outputVisual" class="mb-5">
+
+  </div>
+  <script src="script.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>
