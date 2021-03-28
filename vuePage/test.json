@@ -1,0 +1,30 @@
+{
+  "Productions": [
+     {
+        "id": "1",
+        "prodName": "Babe The Sheep Pig",
+        "prodPoster": "../images/show-posters/21-03-babe.jpeg",
+        "prodRole": "Sound No. 1",
+        "prodVenue": "Bellairs Theatre",
+        "prodProducer": "Guildford School of Acting",
+        "prodDirector": "Directed by Chloe France",
+        "prodSoundDesigner": "Sound Design by Jon Higson",
+        "prodDate": "March 2021",
+        "prodWriters": "Written by David Wood\nAdapted from the book by Dick King-Smith\nMusical Direction by Ed Zanders",
+        "prodDesc": "Based on the best-selling children’s book and the internationally successful film, this stage adaptation of Babe, The Sheep Pig is a delight for all the family. Character, movement and music interweave to create a timeless tale with themes of honesty, trust and acceptance."
+     },
+     {
+        "id": "",
+        "prodName": "",
+        "prodPoster": "../images/show-posters/",
+        "prodRole": "",
+        "prodVenue": "",
+        "prodProducer": "",
+        "prodDirector": "",
+        "prodSoundDesigner": "",
+        "prodDate": "",
+        "prodWriters": "",
+        "prodDesc": ""
+     }
+  ]
+}
