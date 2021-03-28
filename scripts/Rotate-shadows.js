@@ -44,7 +44,7 @@ function angledShadow(element) {
 
 function enableShadows() {
   // get elements to give shadow
-  var rotatedElements = document.getElementsByClassName("sticky");
+  var rotatedElements = $(".sticky");
 
   console.log(rotatedElements);
 
