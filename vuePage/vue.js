@@ -102,7 +102,7 @@ var stickies = new Vue ({
 
 // Import whole block
 Vue.component("production", {
-  props: ['prodPoster', 'prodName', 'prodRole', 'prodVenue', 'prodProducer', 'prodDirector', 'prodSoundDesigner', 'prodDate', 'prodWriters', 'prodDescLead', 'prodDescRest', 'prodVideo', 'prodQuotes', 'key'],
+  props: ['prodPoster', 'altText', 'prodName', 'prodRole', 'prodVenue', 'prodProducer', 'prodDirector', 'prodSoundDesigner', 'prodDate', 'prodWriters', 'prodDescLead', 'prodDescRest', 'prodVideo', 'prodQuotes'],
   template: `<div id="Hello" class="container-fluid px-4 mt-3 show-info">
   <div class="row gx-5 align-items-center position-relative">
     <div class="col-md-3 gy-4">
@@ -115,7 +115,7 @@ Vue.component("production", {
       <p class="show-info-role" id="prodRole"><strong>{{prodRole}}</strong> | {{prodVenue}}<br>{{prodProducer}}</p>
       <p class="show-info-creatives" id="prodCreatives">Directed by {{prodDirector}}<br>Sound Design by {{prodSoundDesigner}}</p>
       <p class="show-info-readmore">
-        <a data-bs-toggle="collapse" href="#XXXX" role="button" aria-expanded="false" aria-controls="XXXX" class="stretched-link">
+        <a data-bs-toggle="collapse" href="#desc-show" role="button" aria-expanded="false" aria-controls="desc-show" class="stretched-link">
           Read more...
         </a>
       </p>
@@ -124,7 +124,7 @@ Vue.component("production", {
       <p class="show-info-date" id="prodDate">{{prodDate}}</p>
     </div>
   </div>
-  <div class="collapse" id="<slot></slot>" data-bs-parent="#all-projects">
+  <div class="collapse show" id="desc-">
     <div class="row justify-content-center pt-3">
       <div class="col-md-3"></div>
       <div class="col-md-6 mb-2 show-info-desc" id="prodDescRest">
@@ -148,66 +148,76 @@ Vue.component("production", {
 </div>`
 })
 
-
+const prods = [
+  { id: 0,
+    prodPoster: "../images/show-posters/20-02-piratequeen.jpeg",
+    altText: "Pirate Queen show poster",
+    prodName: "The Pirate Queen",
+    prodRole: "Sound No. 1",
+    prodVenue: "The London Coliseum",
+    prodProducer: "",
+    prodDirector: "Drew Baker",
+    prodSoundDesigner: "Olly Steel",
+    prodDate: "February 2020",
+    prodWriters: "Music by Claude-Michel Schonberg\nLyrics by Alain Boublil & Richard Maltby Jr.\nBook by Claude-Michel Schonberg & Alain Boublil",
+    prodDescLead: "Based on the story of Grace O’Malley, the personification of Ireland, The Pirate Queen is an epic tale of love, honour, and piracy in Renaissance Ireland.",
+    prodDescRest: [ 
+      { text: "In a time when women were expected to learn skills to make a good wife in the homestead, Grace defies her father and earns the title ‘The Pirate Queen’, inspiring men and women alike to follow her. When the English begin to attack and subjugate Ireland, only Grace has the strength and intelligence to negotiate peace with the powerful Queen Elizabeth I." },
+      { text: "With a score by Claude-Michel Schönberg and Alain Boublil, steeped in Irish traditions and powerful ballads, The Pirate Queen is both timeless history and epic romance for the stage." },
+      { text: "Starring Rachel Tucker (Olivier Nominee, Elphaba in Wicked – Broadway & West End, Come From Away), Jai McDowall (Britain’s Got Talent winner) & Matt Pagan (Collabro)." },
+      { text: "A charity concert production with proceeds to Leukaemia UK." } ],
+    prodVideo: "",
+    prodQuotes: [
+      { text: "This is the quote text 1",
+      source: "Source 1", acw: true },
+      { text: "This is quote 2", 
+      source: "Source 2", cw: true },
+    ]
+  },
+  { id: 1,
+    prodPoster: "../images/show-posters/20-01-jpgffs.jpeg",
+    altText: "Fashion Freak Show show poster",
+    prodName: "Jean Paul Gaultier's Fashion Freak Show",
+    prodRole: "Sound No. 2",
+    prodVenue: "International Tour",
+    prodProducer: "",
+    prodDirector: "Jean Paul Gaultier",
+    prodSoundDesigner: "",
+    prodDate: "Jan - Feb 2020",
+    prodWriters: "",
+    prodDescLead: "Based on the story of Grace O’Malley, the personification of Ireland, The Pirate Queen is an epic tale of love, honour, and piracy in Renaissance Ireland.",
+    prodDescRest: [ 
+      { text: "In a time when women were expected to learn skills to make a good wife in the homestead, Grace defies her father and earns the title ‘The Pirate Queen’, inspiring men and women alike to follow her. When the English begin to attack and subjugate Ireland, only Grace has the strength and intelligence to negotiate peace with the powerful Queen Elizabeth I." },
+      { text: "With a score by Claude-Michel Schönberg and Alain Boublil, steeped in Irish traditions and powerful ballads, The Pirate Queen is both timeless history and epic romance for the stage." },
+      { text: "Starring Rachel Tucker (Olivier Nominee, Elphaba in Wicked – Broadway & West End, Come From Away), Jai McDowall (Britain’s Got Talent winner) & Matt Pagan (Collabro)." },
+      { text: "A charity concert production with proceeds to Leukaemia UK." } ],
+    prodVideo: "",
+    prodQuotes: [
+      { text: "This is the quote text 3",
+      source: "Source 3", acw: true },
+      { text: "This is quote 4", 
+      source: "Source 4", cw: true },
+    ]
+  }
+]
 
 var production = new Vue ({
   el: "#allshows",
   data: {
-    shows: [
-      { id: 0,
-        prodPoster: "../images/show-posters/20-02-piratequeen.jpeg",
-        prodName: "The Pirate Queen",
-        prodRole: "Sound No. 1",
-        prodVenue: "The London Coliseum",
-        prodProducer: "",
-        prodDirector: "Drew Baker",
-        prodSoundDesigner: "Olly Steel",
-        prodDate: "February 2020",
-        prodWriters: "Music by Claude-Michel Schonberg\nLyrics by Alain Boublil & Richard Maltby Jr.\nBook by Claude-Michel Schonberg & Alain Boublil",
-        prodDescLead: "Based on the story of Grace O’Malley, the personification of Ireland, The Pirate Queen is an epic tale of love, honour, and piracy in Renaissance Ireland.",
-        prodDescRest: [ 
-          { text: "In a time when women were expected to learn skills to make a good wife in the homestead, Grace defies her father and earns the title ‘The Pirate Queen’, inspiring men and women alike to follow her. When the English begin to attack and subjugate Ireland, only Grace has the strength and intelligence to negotiate peace with the powerful Queen Elizabeth I." },
-          { text: "With a score by Claude-Michel Schönberg and Alain Boublil, steeped in Irish traditions and powerful ballads, The Pirate Queen is both timeless history and epic romance for the stage." },
-          { text: "Starring Rachel Tucker (Olivier Nominee, Elphaba in Wicked – Broadway & West End, Come From Away), Jai McDowall (Britain’s Got Talent winner) & Matt Pagan (Collabro)." },
-          { text: "A charity concert production with proceeds to Leukaemia UK." } ],
-        prodVideo: "",
-        prodQuotes: [
-          { text: "This is the quote text 1",
-          source: "Source 1", acw: true },
-          { text: "This is quote 2", 
-          source: "Source 2", cw: true },
-        ]
-      },
-      { id: 1,
-        prodPoster: "../images/show-posters/20-01-jpgffs.jpeg",
-        prodName: "Jean Paul Gaultier's Fashion Freak Show",
-        prodRole: "Sound No. 2",
-        prodVenue: "International Tour",
-        prodProducer: "",
-        prodDirector: "Jean Paul Gaultier",
-        prodSoundDesigner: "",
-        prodDate: "Jan - Feb 2020",
-        prodWriters: "",
-        prodDescLead: "Based on the story of Grace O’Malley, the personification of Ireland, The Pirate Queen is an epic tale of love, honour, and piracy in Renaissance Ireland.",
-        prodDescRest: [ 
-          { text: "In a time when women were expected to learn skills to make a good wife in the homestead, Grace defies her father and earns the title ‘The Pirate Queen’, inspiring men and women alike to follow her. When the English begin to attack and subjugate Ireland, only Grace has the strength and intelligence to negotiate peace with the powerful Queen Elizabeth I." },
-          { text: "With a score by Claude-Michel Schönberg and Alain Boublil, steeped in Irish traditions and powerful ballads, The Pirate Queen is both timeless history and epic romance for the stage." },
-          { text: "Starring Rachel Tucker (Olivier Nominee, Elphaba in Wicked – Broadway & West End, Come From Away), Jai McDowall (Britain’s Got Talent winner) & Matt Pagan (Collabro)." },
-          { text: "A charity concert production with proceeds to Leukaemia UK." } ],
-        prodVideo: "",
-        prodQuotes: [
-          { text: "This is the quote text 1",
-          source: "Source 1", acw: true },
-          { text: "This is quote 2", 
-          source: "Source 2", cw: true },
-        ]
-      }
-    ]
+    shows: prods
+  },
+  methods: {
+    getProductionByIndex({ prods = [], index=0 }) {
+      return prods[index] || {}
+    }
+  },
+  computed: {
+    thisId: function() {
+      return this.shows.filter(function() {
+        return show.id === 0
+      })
+    }
   }
-})
-
-var production = new Vue ({
-  el: "production",
 })
 
 Vue.component("test", {
@@ -218,3 +228,13 @@ Vue.component("test", {
 var test = new Vue ({
   el: "test"
 })
+
+$(function(){
+  window.onload, function(){
+      var id = 1;
+      var qty = $(this).val();
+      $(this).parent().siblings(":last").find('production').attr('v-for', function(){
+          return "show in shows.slice("+id+","+(id+1)+")";
+      });
+  };
+});

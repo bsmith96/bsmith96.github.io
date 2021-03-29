@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Generate new production entry: BSS</title>
+  <title>Test vue home page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="../scss/custom.css" rel="stylesheet">
   <link href="../open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet" />
   <link href="../open-iconic/svg/document.svg" rel="icon" />
@@ -61,7 +63,7 @@
   </div>
 
   <div id="allshows">
-  <production v-for="show in shows" v-bind="show">slotted</production>
+  <production v-for="show in shows" v-bind="show" :key="show.id"></production>
   </div>
 
   <div id="allshows2">
@@ -77,5 +79,6 @@
   <script src="../bootstrap/js/bootstrap.bundle.js"></script>
   <script src="./vue.js"></script>
   <script src="../scripts/Rotate-shadows.js"></script>
+  <script src="./require.js"></script>
 </body>
 </html>
