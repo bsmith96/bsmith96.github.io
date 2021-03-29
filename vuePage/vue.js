@@ -1,12 +1,3 @@
-// VUE DEMO
-
-var app6 = new Vue({
-  el: '#app-6',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-
 // VUE TEMPLATES
 
 var prodPoster = new Vue ({
@@ -229,12 +220,85 @@ var test = new Vue ({
   el: "test"
 })
 
-$(function(){
-  window.onload, function(){
-      var id = 1;
-      var qty = $(this).val();
-      $(this).parent().siblings(":last").find('production').attr('v-for', function(){
-          return "show in shows.slice("+id+","+(id+1)+")";
-      });
-  };
-});
+// Site components
+
+Vue.component("sitenavbar", {
+  props: [],
+  template: `<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><span class="oi oi-headphones" title="headphones" aria-hidden="true"></span> Ben Smith Sound</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mailto:ben@bensmithsound.uk">Email Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../files/Ben_Smith_Sound_CV.pdf">Download my CV</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Useful Resources
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="https://www.github.com/bsmith96/Qlab-Scripts">Qlab Scripts</a></li>
+            <li><a class="dropdown-item" href="https://www.github.com/bsmith96/Reaper-Scripts">Reaper Scripts</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="d-none d-lg-block">
+      <a href="https://twitter.com/bensmith_96"><img src="../../../../other-icons/Twitter social icons - circle - white.png" height="32px"></a>
+      <a href="https://github.com/bsmith96"><img src="../../../../other-icons/GitHub-Mark-Light-64px.png" height="32px"></a>
+    </div>
+  </div>
+</nav>`
+})
+
+Vue.component("siteheader", {
+  props: [],
+  template: `<div class="container-fluid header">
+    <div class="row pt-3 pb-2 justify-content-center align-items-center">
+      <div class="col-lg-2">
+        <p class="header-title">Ben Smith</p>
+      </div>
+      <div class="col-lg-4">
+        <p class="header-subtitle">Theatre Sound Engineer and Designer</p>
+      </div>
+    </div>
+  </div>`
+})
+
+var siteheader = new Vue ({
+  el: "siteheader"
+})
+
+var sitenavbar = new Vue ({
+  el: "sitenavbar"
+})
+
+Vue.component("sitefooter", {
+  props: [],
+  template: `<!--Footer-->
+  <div class="container-fluid mt-3 py-3 footer">
+    <div class="row justify-content-end align-items-center">
+      <div class="col-sm-6">
+        <p>You can contact me at <a href="mailto:ben@bensmithsound.uk" class="text-reset">ben@bensmithsound.uk</a></p>
+      </div>
+      <div class="col-sm-2">
+        <a href="https://www.audinate.com/learning/training-certification/dante-certification-program">
+          <img class="float-end footer-image" src="images/dante_certified_seal_level3.png" alt="Dante certified seal level 3" height="80rem">
+        </a>
+      </div>
+    </div>
+  </div>`
+})
+
+var sitefooter = new Vue ({
+  el: "sitefooter"
+})
